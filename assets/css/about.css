@@ -1,0 +1,454 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    /*========== Colors ==========*/
+    --white-color: #ffffff;
+    --white-dark-color: #F9F9F9;
+    --accent-color: #EBEBFF;
+    --orange-color: #F59842;
+    --blue-color: #01005C;
+    --grey-color: #5E5E5E;  
+    --black-color: #1A1A1A;
+
+
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --header-font: "Inter", sans-serif;
+    --body-font: "Source Sans 3", sans-serif;
+    --big-font-size: 4rem;
+    --h1-font-size: 1.75rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .625rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 1024px) {
+    :root {
+        --big-font-size: 8rem;
+        --h1-font-size: 2.5rem;
+        --h2-font-size: 2.25rem;
+        --h3-font-size: 1.5rem;
+        --normal-font-size: 1.375rem;
+        --small-font-size: 1rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--small-font-size);
+    background-color: var(--white-color);
+    color: var(--grey-color);
+    line-height: 1.5 !important;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none !important;
+}
+h1, h2, h3 {
+    font-family: var(--header-font) !important;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.section {
+    padding: 3.5rem 0 2rem;
+}
+
+.section-title {
+    color: var(--black-color);
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-bold);
+}
+
+.section-subtitle {
+    color: var(--grey-color);
+    font-size: var(--h3-font-size);
+}
+
+.text {
+    font-size: var(--small-font-size);
+}
+
+.button {
+    color: var(--white-color);
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    padding: 10px 35px;
+    border-radius: 8px;
+    border: 2px solid var(--blue-color);
+    background-color: var(--blue-color);
+    transition: background-color .4s, color .4s, border .4s;
+}
+
+.button:hover {
+    color: var(--blue-color);
+    background-color: var(--white-color);
+    border: 2px solid var(--blue-color);
+}
+
+.logo {
+    width: 60px;
+    height: 30px;
+}
+
+.main {
+    overflow: hidden; /* For the animations ScrollReveal*/
+}
+
+/* --=== Header and Nav === */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--white-color) !important;
+    z-index: var(--z-fixed);
+}
+
+.navbar-nav {
+    background-color: var(--white-color) !important;
+}
+
+.nav-link {
+    font-size: var(--small-font-size) !important;
+}
+
+.navbar-toggler {
+    padding-right: 0 !important;
+    margin-bottom: 5px;
+    border: none !important;
+}
+
+.navbar-toggler:focus {
+    text-decoration: none;
+    box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+    font-size: 1.25rem;
+}
+
+/* Change background header */
+.scroll-header {
+    box-shadow: 0 1px 4px hsla(228, 4%, 15%, .1) !important;
+}
+
+/* --=== Home === */
+.home {
+    padding: 6.5rem 0 2rem !important;
+}
+
+/* --=== Mission & Vision === */
+.mission {
+    background-image: url(../img/Vector1.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.icon {
+    width: 45px;
+    height: 30px;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--orange-color);
+    color: var(--white-color);
+}
+
+.icon i {
+    font-size: var(--h3-font-size);
+    color: var(--orange-color);
+}
+
+.vision-img {
+    mask: url('data:image/svg+xml,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="%23FF0066" d="M36.6,-58.4C49,-56.2,61.6,-49.5,69.4,-39.1C77.2,-28.6,80.1,-14.3,77.2,-1.7C74.2,10.9,65.4,21.8,56.6,30.5C47.8,39.3,39.1,45.9,29.6,52C20.2,58.2,10.1,63.8,-1.7,66.7C-13.5,69.7,-27,69.9,-36.1,63.6C-45.2,57.3,-49.9,44.4,-55.7,32.7C-61.5,21,-68.5,10.5,-69.5,-0.6C-70.5,-11.7,-65.5,-23.3,-59.9,-35.3C-54.2,-47.3,-47.9,-59.6,-37.8,-63.1C-27.7,-66.6,-13.8,-61.3,-0.9,-59.8C12.1,-58.3,24.2,-60.6,36.6,-58.4Z" transform="translate(100 100)" /></svg>') center / cover no-repeat;
+    -webkit-mask: url('data:image/svg+xml,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="%23FF0066" d="M36.6,-58.4C49,-56.2,61.6,-49.5,69.4,-39.1C77.2,-28.6,80.1,-14.3,77.2,-1.7C74.2,10.9,65.4,21.8,56.6,30.5C47.8,39.3,39.1,45.9,29.6,52C20.2,58.2,10.1,63.8,-1.7,66.7C-13.5,69.7,-27,69.9,-36.1,63.6C-45.2,57.3,-49.9,44.4,-55.7,32.7C-61.5,21,-68.5,10.5,-69.5,-0.6C-70.5,-11.7,-65.5,-23.3,-59.9,-35.3C-54.2,-47.3,-47.9,-59.6,-37.8,-63.1C-27.7,-66.6,-13.8,-61.3,-0.9,-59.8C12.1,-58.3,24.2,-60.6,36.6,-58.4Z" transform="translate(100 100)" /></svg>') center / cover no-repeat;
+    box-shadow:  -9px -9px 18px #060606,
+             9px 9px 18px #5d5c5c;
+}
+
+/* --=== Impact === */
+.impact {
+    padding: 4.5rem 0 4.5rem !important;
+    margin-top: 2rem !important;
+    color: var(--white-color);
+    background: linear-gradient(#02005ceb, #02005ceb), url(../img/Vector.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.impact-title {
+    color: var(--white-color);
+}
+
+.impact-text {
+    color: var(--white-color);
+    font-size: var(--big-font-size);
+}
+
+/* --=== Partners === */
+.partner-swiper{
+    background-color: var(--accent-color);
+}
+
+.sponsors-container {
+    display: flex;
+    align-items: center;
+}
+
+.sponsors-img {
+    padding: 5px 20px;
+}
+
+.sponsors-img img {
+    width: 7rem;
+}
+
+/* --=== Team === */
+.team {
+    padding: 2.5rem 0 2.5rem !important;
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    overflow: hidden;
+}
+
+.team-title {
+    color: var(--white-color);
+}
+
+.team-wrapper {
+    padding-bottom: 50px;
+}
+
+.team-card {
+    width: 200px !important;
+    padding: 15px 15px;
+    border-radius: 5px;
+    background-color: var(--blue-color);
+    box-sizing: border-box;
+}
+
+.team-card .team-name,
+.team-card .team-rank {
+    display: none;
+}
+
+.team-card.swiper-slide-active .team-name,
+.team-card.swiper-slide-active .team-rank {
+    display: block;
+}
+
+.swiper-slide-active {
+    border: 1px solid var(--white-dark-color);
+    width: 220px !important;
+}
+
+.team-name {
+    font-size: var(--h3-font-size);
+}
+
+.team-rank {
+    font-size: var(--smaller-font-size);
+    margin: 0;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: '' !important;
+}
+
+.swiper-button-next, 
+.swiper-button-prev {
+    top: initial !important;
+    bottom: 0 !important;
+    width: initial !important;
+    height: initial !important;
+    padding: 3px 6px !important;
+    border-radius: 50px !important;
+    font-size: 1.25rem !important;
+    color: var(--blue-color) !important;
+    background-color: var(--white-dark-color);
+}
+
+.swiper-button-prev {
+    left: calc(50% - 2.5rem) !important;
+}
+.swiper-button-next {
+    right: calc(50% - 2.5rem) !important;
+}
+
+
+/*=== Footer ===*/
+.footer {
+    padding: 3.25rem 0 3.25rem !important;
+    margin-top: 5rem;
+    background-color: var(--white-dark-color);
+    overflow: hidden;
+}
+
+.footer-title {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    color: var(--blue-color);
+}
+
+.footer-links {
+    padding: 0;
+}
+
+.footer-link {
+    font-size: var(--small-font-size);
+    color: var(--grey-color);
+}
+
+.footer-link:hover {
+    color: var(--black-color);
+}
+
+.footer-social {
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social-link i {
+    color: var(--grey-color);
+    font-size: var(--normal-font-size);
+}
+
+.copy-section {
+    padding: 2.5rem 0 2.5rem;
+    background-color: var(--blue-color);
+}
+
+.copy-text {
+    color: var(--white-dark-color);
+    font-size: var(--smaller-font-size);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For medium devices */
+@media screen and (min-width: 630px) {
+    .logo {
+        width: 70px;
+        height: 35px;
+    }
+
+    .impact {
+        background-position: right !important;
+        background-size: contain;
+    }
+
+    .sponsors-img img {
+        width: 110px !important;
+    }
+
+    .swiper-slide-active {
+        width: 250px !important;
+    }
+    .team-wrapper {
+        padding-bottom: 0;
+    }
+    .swiper-button-next, 
+    .swiper-button-prev {
+        padding: 5px 10px !important;
+        font-size: 1.5rem;
+        bottom: 20px !important;
+    }
+    .swiper-button-prev {
+        left: 80% !important;
+    }
+    .swiper-button-next {
+        right: 7% !important;
+    }
+
+}
+
+/* For large devices */
+@media screen and (min-width: 1023px) {
+    .section {
+        padding: 5.5rem 0 3.5rem !important;
+    }
+
+    .logo {
+        width: 80px;
+        height: 40px;
+    }
+
+    .home {
+        padding: 6rem 0 3rem !important;
+    }
+
+    .sponsors-img {
+        padding: 10px 4.5rem;
+    }
+    .sponsors-img img {
+        width: 150px !important;
+    }
+
+    .swiper-slide-active {
+        width: 280px !important;
+    }
+    .swiper-button-next, 
+    .swiper-button-prev {
+        bottom: 25px !important;
+    }
+    .swiper-button-prev {
+        left: 67% !important;
+    }
+    .swiper-button-next {
+        right: 25% !important;
+    }
+}
+
+/* For 2K & 4K resolutions */
+@media screen and (min-width: 2048px){
+    body {
+        zoom: 1.5;
+    }
+}
+
+@media screen and (min-width: 3840px){ 
+    body {
+        zoom: 2;
+    }
+}

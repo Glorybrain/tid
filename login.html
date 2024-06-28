@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--==== Title ====-->
+    <title>Tid . Login</title>
+    <!--==== Css ====-->
+    <link rel="stylesheet" href="assets/css/login.css">
+    <!--==== Bootstrap Css ====-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--==== Remix Icon ====-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+    <!-- ==== Login ====-->
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="row shadow box-area">
+            <!--== left ==-->
+            <div class="col-md-6 left-box">
+                <div class="logo mb-5">
+                    <img src="assets/img/TID LOGO.png" alt="" class="img-fluid ">
+                </div>
+
+                <div class="mt-2 mb-3">
+                    <h4 class="section-title">Welcome Back</h4>
+                </div>
+
+                <form>
+                    <div class="mb-3">
+                        <label for="email" class="form-label text">Enter your Email address</label>
+                        <input type="email" class="form-control form-control-lg bg-light text" id="email" aria-describedby="emailHelp" placeholder="...@gmail.com" required>
+                        <p id="invalidEmail" class="message text">Invalid Email Address</p>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label text">Enter your Password</label>
+                        <div class="pass-box">
+                            <input type="password" class="form-control form-control-lg text" id="password" value="Figma2024" required>
+                            <p id="eyeicon" class="icon">
+                                <i class="ri-eye-off-line"></i>
+                            </p>
+                        </div>
+                        <p id="invalidPassword" class="message text">Invalid Password</p>
+                    </div>
+                    
+                    <div class="forgot mt-4">
+                        <div class="">
+                            <p class="text">Don't have an account? <a href="create.html" class="create-link">Create Account</a></p>
+                        </div>
+                        
+                        <a href="#" class="button">Login</a>
+                    </div>
+
+                    <div class="mt-1">
+                        <a href="forgot.html" class="small-text forgot-link">Forgot Password?</a>
+                    </div>
+                </form>
+            </div>
+
+            <!--== right ==-->
+            <div class="col-md-6 right-box">
+                <img src="assets/img/Rectangle 3.jpg" alt="" class="img-fluid">
+            </div>
+
+        </div>
+    </div>
+
+    <!--==== BOOTSTRAP JS ====-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--==== JS ====-->
+    <script src="assets/js/password.js"></script>
+</body>
+</html>
