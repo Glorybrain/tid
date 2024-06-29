@@ -122,7 +122,7 @@ img {
 .button-outline {
     font-size: var(--small-font-size);
     font-weight: var(--font-semi-bold) !important;
-    padding: 10px 30px !important;
+    padding: 10px 25px !important;
     color: var(--blue-color);
     border: 2px solid var(--blue-color);
     border-radius: 8px !important;
@@ -155,8 +155,6 @@ img {
     color: var(--white-color);
 }
 
-.icon
-
 b {
     color: var(--blue-color) !important;
 }
@@ -165,6 +163,23 @@ b {
     display: none;
     color: #EB5454;
     margin-top: 3px;
+}
+
+.btn {
+    color: var(--white-color) !important;
+    font-size: var(--small-font-size) !important;
+    font-weight: var(--font-semi-bold) !important;
+    padding: 10px 30px !important;
+    border-radius: 8px !important;
+    border: 2px solid var(--blue-color) !important;
+    background-color: var(--blue-color) !important;
+    transition: background-color .4s, color .4s;
+}
+
+.btn:hover {
+    color: var(--blue-color) !important;
+    background-color: var(--white-color) !important;
+    border: 2px solid var(--blue-color) !important;
 }
 
 .none {
