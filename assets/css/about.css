@@ -147,6 +147,7 @@ img {
 
 .nav-link {
     font-size: var(--small-font-size) !important;
+    font-weight: var(--font-medium) !important;
 }
 
 .navbar-toggler {
